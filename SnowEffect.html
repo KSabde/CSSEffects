@@ -7,17 +7,64 @@
     <title>SnowEffect</title>
 
     <style>
-        body{
-            background: black;
+        *{
             margin: 0;
             padding: 0;
         }
-        .snow{
+        body{
+            background:url(snow.jpg);
+            background-size: cover;
+            background-position:cover ;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+           display: grid;
+           place-items: center;
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           background: url(1.png),url(2.png),url(3.png);
+           animation: animate 20s linear infinite;
            
+        }
+        .box h1{
+            font-family: poppins;
+            /* font-style: italic; */
+            font-weight: bold;
+            color:white;
+            margin-top: 241px;
+           border: 2px solid white;
+           padding: 30px;
+        }
+        h4{
+            font-family: poppins;
+            font-style: italic;
+            font-style:serif;
+            font-weight:normal;
+            color:white;
+            margin-bottom: 200px;
+            
+           
+        }
+        @keyframes animate {
+            0%{
+                background-position:0 0,0 0,0 0;
+            }
+            100%{
+                background-position: 500px 1000px,550px 550px,660px 660px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Snowfall Animation Using CSS</h1>
+    <div class="box">
+     <h1>   Merry Christmas with lots of love</h1>
+    <h4>Snowfall Animation Using CSS</h4>
+ 
+    </div>
 </body>
 </html>
